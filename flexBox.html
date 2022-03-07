@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX</title>
+    <style>
+        .container {
+            background-color: blueviolet;
+            border:  solid 10px rgb(2, 2, 2);
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            /*
+            Puede estar asi o asi
+            width: 500px;
+            height: 100px;
+            */
+            
+            /*
+            -Son para ver la direccion de nuestro contenedor:
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            
+            -Para no hacer desbordar la informacion de un contenedor
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+            
+            -Para usar menos codigo y tener las dos opciones anteriores en una sola
+            flex-flow: column wrap;
+           
+            -Para alinear elementos horizontalmente
+            justify-content: center; -centro
+            justify-content: baseline; -
+            justify-content: flex-start; -a la izquierda
+            justify-content: flex-end; -a la derecha
+            justify-content: space-between; -espacio entre los elementos
+            justify-content: space-around; -espacio entre los elemntos y contenedos(poco espacio del contenedor)
+            justify-content: space-evenly; -espacio entre los elemntos y contenedos
+           
+            -Para colocar los elementos en diferentes posiciones verticalmente y jugar con el tamaño de estas
+            align-items: flex-start;-arriba
+            align-items: flex-end ;-abajo 
+            align-items: center;-vertical en el centro
+            align-items: stretch;-es para que ocupen todo el alto del contendor
+            align-items: baseline;-se alinea con el texto los elementos
+           
+            -Se necesita que el flex-flow sea wrap o wrap-reverse y sea multilinea para usar align-content
+            flex-flow: row wrap;
+            align-content: space-between;
+            
+            -Para tener un espacio entre elementos 
+            gap: 10px;
+            
+            
+            */
+        }
+
+        .container > div{
+            height: 50px;
+        }
+        /*
+        -Para el orden de los elemtentos (debe ir dentro de los elemntos no los contenedores)
+        order: 1;
+        
+        -Para asiganar mas tamaño a un elemento que a los de mas(para que sea igual debe tener el mismo numero en todos los elementos) 
+        flex-grow: 1;
+
+        -Para cuando se miniminiza tenerle el tamaño definido a los elementos
+        flex-shrink: 3;
+
+        -Para dar un tamaño base pero que es modificable(esto no hace que se desborden los elementos del contenedor)
+        flex-basis: 100px;
+
+        -Simplificar esto en una linea
+        flex: 0 1 auto;
+
+        -Para alinearlos elemntos de manera individual(dentro de  un elemento a modificar)
+        align-self: center;
+
+            */
+        .item-1 {
+            background-color:burlywood;
+            order: 0;
+        }
+
+        .item-2 {
+            background-color:burlywood;
+            order: 3;
+        }
+
+        .item-3 {
+            background-color:burlywood;
+            order: 1;
+        }
+
+        .item-4 {
+            background-color:burlywood;
+            order: 2;
+        }
+        
+        .item-5 {
+            background-color:burlywood;
+            order: 7;
+        }
+
+        .item-6 {
+            background-color:burlywood;
+        }
+
+        .item-7 {
+            background-color:burlywood;
+        }
+
+        .item-8 {
+            background-color:burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item-1">LOGO</div>
+        <div class="item-2">Menú principal</div>
+        <div class="item-3">Búsqueda</div>
+        <div class="item-4">login</div>
+        <div class="item-5">LOGO</div>
+        <div class="item-6">Menú principal</div>
+        <div class="item-7">Búsqueda</div>
+        <div class="item-8">login</div>
+       
+      
+    </div>
+
+</body>
+
+</html>
